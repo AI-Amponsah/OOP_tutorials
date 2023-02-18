@@ -9,5 +9,13 @@ using namespace std;
 
 int main(void)
 {
+    float gallons = 7.481;
+    float feet;
+
+    cout << "Please Enter number of gallons: " ;
+    cin >> feet;
+
+    feet = gallons * feet;
+    cout << "Number of gallons per cubic feet is: " << feet << endl;
     return (0);
 }
