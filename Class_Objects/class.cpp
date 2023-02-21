@@ -11,19 +11,22 @@ class smallOBj
     private:
      int data;
     public:
-        int some_function()
+        string name;
+        int age;
+        void print()
         {
+            cout  << age << endl;
 
         }
-        void show_data(int d)
-        {
-
-        }
-
 };
 
 int main(void)
 {
+    smallOBj person;
+    person.name = "Isaac";
+    person.age = 98;
+
+    person.print();
 
     return (0);
 }
