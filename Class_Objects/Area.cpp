@@ -25,11 +25,14 @@ class Quadrilateral
 			y = width;
 		}
 
-		int area()
-		{
-			return x * y;
-		}
+		int area();
 };
+//Declaring method outside the class by using :: operator
+// Note how the return data type comes before the class
+int Quadrilateral::area()
+{
+	return x * y;
+}
 
 int main(void)
 {
