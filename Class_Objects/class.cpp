@@ -15,12 +15,14 @@ class small
         int age;
 	
 	// using set_data to change the value of a private member data
+	// setter function
 	void set_data(int change_data)
 	{
 		data = change_data;
 
 	}
 	//using get_data to acess the or retun the value of a private data member
+	// getter function
 	int  get_data()
 	{
 		return (data);
