@@ -8,8 +8,7 @@ using namespace std;
 */
 
 int main(void)
-{
-    int temp;
+{}
     float Fahrenheit;
     float Celsius;
     char choice;
