@@ -33,9 +33,9 @@ int main(void)
 {
     Owner owner1;
     string name, address;
-    cout << "Enter name: " << endl;
+    cout << "Enter name: ";
     cin >> name;
-    cout << "Enter address: " << endl;
+    cout << "Enter address: ";
     cin >> address;
     
     owner1.set_owner(name, address);
