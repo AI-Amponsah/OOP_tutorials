@@ -15,7 +15,7 @@ class smallOBj
         int age;
         void print()
         {
-            cout  << age << endl;
+            cout  << name << endl;
 
         }
 };
@@ -25,6 +25,7 @@ int main(void)
     smallOBj person;
     person.name = "Isaac";
     person.age = 98;
+    //person.data = 1000;  // Trying to acess a private member 
 
     person.print();
 
