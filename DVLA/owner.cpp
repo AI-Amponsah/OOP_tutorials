@@ -3,6 +3,7 @@
 #include <fstream>
 using namespace std;
 void Owner_inputs();
+void display();
 class Owner
 {
     private:
@@ -12,7 +13,7 @@ class Owner
             string address;
             string phone_number;
 
-            void print()
+            void serialize()
             {
                 ofstream outfile("json.txt",ios::out | ios_base::app);
                 outfile << name << " " << address << " " << phone_number << endl;
@@ -33,34 +34,52 @@ class Owner
             s.name = name;
             s.address = address;
 	    s.phone_number = number;
-            s.print();     
+            s.serialize();     
         }
+
+        void Owner_inputs()
+        {
+            Owner owner1;
+            string name, address, number;
+    
+            cout << "Enter name: ";
+            cin >> name;
+            cout << "Enter address: ";
+            cin >> address;
+            cout << "Enter Phone Number: ";
+            cin >> number;
+            cout << endl;
+            owner1.set_owner(name, address, number);
+        }
+
+        void display()
+        {
+            ifstream ifs("json.txt");
+            string data;
+            while(ifs.good())
+            {
+                ifs >> data ;
+                if (ifs.good())
+                {
+                    cout  << data.size();
+                    cout << " ";
+                }
+            }
+            cout << endl;
+            ifs.close();
+
+}
+
 
 
 };
 
 int main(void)
 {
-    Owner_inputs();
-    
+    Owner person;
+    person.display();
+    person.Owner_inputs();
     return (0);
 }
 
-void Owner_inputs()
-{
-    do{
-    Owner owner1;
-    string name, address, number;
-    
-    cout << "Enter name: ";
-    cin >> name;
-    cout << "Enter address: ";
-    cin >> address;
-    cout << "Enter Phone Number: ";
-    cin >> number;
-    cout << endl;
-    owner1.set_owner(name, address, number);
-    }while(1);
-    
 
-}
