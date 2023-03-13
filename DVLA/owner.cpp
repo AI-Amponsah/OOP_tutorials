@@ -33,7 +33,7 @@ class Owner
             owner s;
             s.name = name;
             s.address = address;
-	    s.phone_number = number;
+	        s.phone_number = number;
             s.serialize();     
         }
 
@@ -69,16 +69,33 @@ class Owner
             ifs.close();
 
 }
-
-
-
+};
+class Vehicle : public Owner 
+{
+    private:
+        string  brand;
+        string model;
+        string number;
+    
+    public:
+        void car_details()
+        {
+            cout << "Enter brand: ";
+            cin >> brand;
+            cout << "Enter model: ";
+            cin >> model;
+            //cout << "Enter Phone Number: ";
+            //cin >> number;
+        }
+   
 };
 
 int main(void)
 {
-    Owner person;
+    Vehicle person;
     person.display();
     person.Owner_inputs();
+    person.car_details();
     return (0);
 }
 
