@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <fstream>
 #include <cstdlib>
 #include <ctime>
 
@@ -28,14 +27,14 @@ class Vehicle : public Owner {
         Vehicle(string brand, string model, string num_plate, string name, string address)
             : Owner(name, address), brand_(brand), model_(model), num_plate_(num_plate) {}
 
-        void set_details()
+        void set_numplate()
         {
-
-            // generate a random number for the vehicle number plate
+            
+            
             srand(time(NULL)); 
-            int rand_num = rand() % 10000 + 1000; /
+            int rand_num = rand() % 10000 + 1000; 
             num_plate_ = "ABC " + to_string(rand_num); 
-            cout << "Vehicle number plate: " << num_plate_ << endl << endl;
+            
         }
 
         void print()
@@ -51,9 +50,20 @@ class Vehicle : public Owner {
 int main(void) 
 {
     string owner_name, owner_address, vehicle_brand, vehicle_model;
-    Vehicle car1(vehicle_brand, vehicle_model, "", owner_name, owner_address);
     
-    car1.set_details();
+    cout << "Enter owner's name: ";
+    getline(cin, owner_name);
+    cout << "Enter owner's address: ";
+    getline(cin, owner_address);
+    Owner owner(owner_name, owner_address);
+
+    cout << "Enter vehicle brand: ";
+    getline(cin, vehicle_brand);
+    cout << "Enter vehicle model: ";
+    getline(cin, vehicle_model);
+
+    Vehicle car1(vehicle_brand, vehicle_model, "", owner_name, owner_address);
+    car1.set_numplate();
     car1.print();
     
     return 0;
