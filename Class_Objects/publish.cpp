@@ -65,18 +65,17 @@ class tape : publication
 };
 int main(void)
 {
-	publication pub1;
 	book  book1;
 	tape tape1;
 
-	pub1.getdata();
-	pub1.putdata();
 
 	book1.getdata();
-	book1.putdata();
-
 	tape1.getdata();
+
+
+	book1.putdata();
 	tape1.putdata();
+
 
 	return (0);
 }
