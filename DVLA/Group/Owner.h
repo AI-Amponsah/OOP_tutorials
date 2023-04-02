@@ -7,7 +7,8 @@
 
 using namespace std;
 
-class Owner : public Vehicle {
+class Owner : public Vehicle
+ {
 private:
     string name;
     string address;

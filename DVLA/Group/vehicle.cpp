@@ -1,7 +1,8 @@
 #include "vehicle.h"
 using namespace std;
 
-Vehicle::Vehicle(string np, string br, string mo, int yr) {
+Vehicle::Vehicle(string np, string br, string mo, int yr) 
+{
     num_plate = np;
     brand = br;
     model = mo;

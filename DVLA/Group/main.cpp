@@ -8,7 +8,8 @@
 
 using namespace std;
 
-void display_menu() {
+void display_menu(void) 
+{
     cout << "Welcome to DVLA database\n";
     cout << "**************************\n";
     cout << "1. Enter details\n";
@@ -18,7 +19,8 @@ void display_menu() {
     cout << "5. Exit\n";
 }
 
-string generate_num_plate() {
+string generate_num_plate(void)
+ {
     string num_plate = "ABC-";
     srand(time(NULL));
     for (int i = 0; i < 3; i++) {
@@ -27,7 +29,8 @@ string generate_num_plate() {
     return num_plate;
 }
 
-void enter_details(vector<Owner>& records) {
+void enter_details(vector<Owner>& records) 
+{
     string brand, model, year_str, name, address, phone_number;
     string num_plate = generate_num_plate();
     time_t now = time(NULL);
@@ -58,7 +61,8 @@ void enter_details(vector<Owner>& records) {
     cout << "Expiration date: " << asctime(expiration_date) << "\n";
 }
 
-void renew_license(vector<Owner>& records) {
+void renew_license(vector<Owner>& records)
+ {
     string search_plate;
     bool found = false;
 
@@ -109,15 +113,17 @@ void search_details(const vector<Owner>& records) {
         }
     }
 
-    if (!found) {
+    if (!found) 
+    {
         cout << "Record not found.\n";
     }
 }
 
-int main() {
+int main(void) {
     vector<Owner> records;
 
-    while (true) {
+    while (true) 
+    {
         display_menu();
         int choice;
         cin >> choice;

@@ -5,7 +5,8 @@
 #include <iostream>
 using namespace std;
 
-class Vehicle {
+class Vehicle
+ {
 private:
     string num_plate;
     string brand;
