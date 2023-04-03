@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include <ctime>
 
-// Include the header files for the Vehicle and Owner classes
+// Including the header files for the Vehicle and Owner classes
 #include "Vehicle.h"
 #include "Owner.h"
 
