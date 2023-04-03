@@ -13,7 +13,7 @@ Owner::Owner(string np, string br, string mo, int yr, string n, string addr, str
     phone_number = phone;
 }
 
-// Method to set the expiration date of the owner's license
+// Function to set the expiration date of the owner's license
 void Owner::set_expiration_date(struct tm date) 
 {
     expiration_date = date;

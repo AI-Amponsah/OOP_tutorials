@@ -64,6 +64,7 @@ void enter_details(vector<Owner>& records)
     getline(cin, address);
     cout << "Enter owner phone number: ";
     getline(cin, phone_number);
+    system("cls");
 
     // Create a new Owner object with the input data and the generated number plate
     Owner record(num_plate, brand, model, year, name, address, phone_number);
@@ -154,8 +155,9 @@ void search_details(const vector<Owner>& records)
     }
 }
 // main / entry point function that runs the program
-// Main function of the program
-int main(void) {
+
+int main(void) 
+{
     // Declare a vector called "records" to store Owner objects
     vector<Owner> records;
     
@@ -175,18 +177,22 @@ int main(void) {
         switch (choice) {
             case 1:
                 // Call to the function "enter_details()" to allow the user to enter details for a new owner
+                system("cls");
                 enter_details(records);
                 break;
             case 2:
                 // Call the function "display_details()" to display all the details of each owner in the "records" vector
+                system("cls");
                 display_details(records);
                 break;
             case 3:
                 // Call to the function "search_details()" to allow the user to search for an owner based on their name or license plate number
+                system("cls");
                 search_details(records);
                 break;
             case 4:
                 // Call  to the function "renew_license()" to allow the user to renew the license of a specific owner
+                system("cls");
                 renew_license(records);
                 break;
             case 5:
