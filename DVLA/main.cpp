@@ -154,35 +154,51 @@ void search_details(const vector<Owner>& records)
     }
 }
 // main / entry point function that runs the program
+// Main function of the program
 int main(void) {
+    // Declare a vector called "records" to store Owner objects
     vector<Owner> records;
-// loop until the user chooses to exit the program
+    
+    // Loop until the user chooses to exit the program
     while (true) 
     {
-        display_menu(); // display the main menu and get the user's choice
+        // Display the main menu and get the user's choice
+        display_menu(); 
+        
+        // Declare an integer variable "choice" to store the user's choice
         int choice;
+        
+        // Read in the user's choice from the standard input stream
         cin >> choice;
 
+        //  switch statement to handle the different options based on the user's choice
         switch (choice) {
             case 1:
+                // Call to the function "enter_details()" to allow the user to enter details for a new owner
                 enter_details(records);
                 break;
             case 2:
+                // Call the function "display_details()" to display all the details of each owner in the "records" vector
                 display_details(records);
                 break;
             case 3:
+                // Call to the function "search_details()" to allow the user to search for an owner based on their name or license plate number
                 search_details(records);
                 break;
             case 4:
+                // Call  to the function "renew_license()" to allow the user to renew the license of a specific owner
                 renew_license(records);
                 break;
             case 5:
+                // Display a message and terminate the program
                 cout << "Exiting program.\n";
                 return 0;
             default:
+                // If the user enters an invalid choice, print an error message and prompt the user to try again
                 cout << "Invalid choice. Please try again.\n";
         }
     }
 
+    // Return 0 to indicate successful completion of the program
     return 0;
 }
