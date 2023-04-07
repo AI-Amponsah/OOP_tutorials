@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class Cpolygon
+class Cpolygon // Base class
 { 
     protected:
         int width, height;
@@ -11,13 +11,13 @@ class Cpolygon
             width = a;
             height = b;
         }
-        virtual int area()
+        virtual int area() // virtual function
         {
             return (0);
         }
 };
 
-class Rectangle :public Cpolygon
+class Rectangle :public Cpolygon // derived class from base class
 { 
     public:
     int area()
@@ -36,11 +36,12 @@ class Triangle :public Cpolygon
 
 int main(void)
 {
-    Rectangle rect;
-    Triangle tri;
-    Cpolygon poly;
+    Rectangle rect;  // base class object
+    Triangle tri;   // derive class object
+    Cpolygon poly;  // derive class object
 
-    Cpolygon *pol1 = &rect;
+// Creating pointers from the base class and storing the objects in them
+    Cpolygon *pol1 = &rect; 
     Cpolygon *pol2 = &tri;
     Cpolygon *pol3 = &poly;
 
